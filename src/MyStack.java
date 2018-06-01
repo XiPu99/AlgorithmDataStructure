@@ -7,12 +7,12 @@ public class MyStack {
     private int top = -1; // index that tracks the top of the stack
     private int[] stack;
 
-    private MyStack(int size){
+    public MyStack(int size){
         stack = new int[size];
     }
 
     // push to the top of the stack
-    private void push(int data){
+    public void push(int data){
         top++;
         if(top>=stack.length) {
             throw new java.lang.Error("Stack overflow");
@@ -21,14 +21,14 @@ public class MyStack {
     }
 
     // pop the element off the top of the stack
-    private int pop() {
+    public int pop() {
         if(isEmpty()) throw new java.lang.Error("Trying to pop an empty stack");
         top--;
         return stack[top+1];
     }
 
     // check if the stack is empty
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return top==-1;
     }
 
