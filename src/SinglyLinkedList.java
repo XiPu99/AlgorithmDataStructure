@@ -16,6 +16,21 @@ public class SinglyLinkedList {
         head = newHead;
     }
 
+    public Node insert(int data, Node n){
+        Node newNode = new Node(data);
+        Node nextNode = n.next;
+        n.next = newNode;
+        newNode.next = nextNode;
+        return newNode;
+    }
+
+    // remove the head
+    public int remove(){
+        int result = head.data;
+        head = head.next;
+        return result;
+    }
+
     public void printList(){
         Node root = head;
         while(root!=null){
@@ -32,8 +47,8 @@ public class SinglyLinkedList {
         return root;
     }
 
-    // return the head of the reversed version of linked list
-    public Node reverse(){
+    // reverse the current linked list
+    public void reverse(){
         Node current = head;
         Node previous = null;
         Node nextNode = null;
@@ -44,13 +59,13 @@ public class SinglyLinkedList {
             current = nextNode;
         }
         current.next = previous;
-        return current;
+        head = current;
     }
 
-    public static void printListFromHead(Node head){
-        while (head != null) {
-            System.out.print(head.data + "->");
-            head = head.next;
+    public static void printListFromHead(Node root){
+        while (root != null) {
+            System.out.print(root.data + "->");
+            root = root.next;
         }
     }
 
@@ -61,6 +76,13 @@ public class SinglyLinkedList {
         }
         l.printList();
         System.out.println();
-        printListFromHead(l.reverse());
+        l.reverse();
+        l.printList();
+        System.out.println();
+        l.remove();
+        l.printList();
+        System.out.println();
+        l.insert(2, l.search(2));
+        l.printList();
     }
 }
