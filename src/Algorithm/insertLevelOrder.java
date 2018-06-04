@@ -1,3 +1,5 @@
+package Algorithm;
+
 public class insertLevelOrder {
 
     public static TreeNode buildTreeFromLevelOrder(int[] array, TreeNode root, int index){

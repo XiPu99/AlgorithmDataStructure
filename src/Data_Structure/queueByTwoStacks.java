@@ -1,3 +1,5 @@
+package Data_Structure;
+
 import java.util.Stack;
 
 public class queueByTwoStacks {

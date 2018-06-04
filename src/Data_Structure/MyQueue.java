@@ -1,8 +1,6 @@
-/*
+package Data_Structure;/*
     Queue implementation using an array
  */
-
-import java.util.Queue;
 
 public class MyQueue {
 

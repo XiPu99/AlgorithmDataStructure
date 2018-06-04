@@ -1,9 +1,10 @@
 /*
     Implementation of singly linked list
  */
+package Data_Structure.LinkedList;
 
 public class SinglyLinkedList {
-    Node head;
+    public Node head;
 
     public SinglyLinkedList(){
         head = null;
@@ -26,6 +27,9 @@ public class SinglyLinkedList {
 
     // remove the head
     public int remove(){
+        if(head==null){
+            throw new java.lang.Error("Trying to remove the head of an empty linked list");
+        }
         int result = head.data;
         head = head.next;
         return result;

@@ -1,4 +1,4 @@
-/*
+package Data_Structure;/*
     An implementation of stack using an array
  */
 
