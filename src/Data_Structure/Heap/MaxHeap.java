@@ -1,9 +1,13 @@
+/*
+    Implementation of a max heap and related operations
+ */
+
 package Data_Structure.Heap;
 
 public class MaxHeap {
 
-    private int heapSize;
-    private int[] maxHeap;
+    public int heapSize;
+    public int[] maxHeap;
 
     // initialize an empty heap; call buildMaxHeap to create a max heap
     public MaxHeap(){
@@ -11,7 +15,7 @@ public class MaxHeap {
         heapSize = maxHeap.length;
     }
 
-    public int parent(int index) {
+    public static int parent(int index) {
         return (index-1) / 2;
     }
 
@@ -101,6 +105,14 @@ public class MaxHeap {
 
     public int getHeapSize(){
         return heapSize;
+    }
+
+    public int getHead(){
+        return maxHeap[0];
+    }
+
+    public int[] getArray(){
+        return maxHeap;
     }
 
     public static void main(String[] args) {

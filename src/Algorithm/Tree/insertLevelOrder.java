@@ -1,4 +1,4 @@
-package Algorithm;
+package Algorithm.Tree;
 
 public class insertLevelOrder {
 
