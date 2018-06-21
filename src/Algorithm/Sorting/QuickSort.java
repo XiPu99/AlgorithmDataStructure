@@ -2,6 +2,7 @@ package Algorithm.Sorting;
 
 public class QuickSort {
 
+    // use quickSort by calling quickSort(arr, 0, arr.length-1)
     public static void quickSort(int[] arr, int p, int r){
         if(p<r){
             int q = partition(arr, p, r);
