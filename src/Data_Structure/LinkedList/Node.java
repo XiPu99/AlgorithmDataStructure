@@ -1,5 +1,5 @@
 /*
-    Data_Structure.LinkedList.Node used by singly linked list
+    Data_Structure.LinkedList.ListNode used by singly linked list
  */
 package Data_Structure.LinkedList;
 
